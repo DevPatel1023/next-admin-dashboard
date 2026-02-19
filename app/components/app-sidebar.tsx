@@ -40,23 +40,23 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const dashboard1 = [
-  { icon: MdDashboard, name: "Default", href: "/" },
-  { icon: VscGraph, name: "CRM", href: "/crm" },
-  { icon: FaCreditCard, name: "Finance", href: "/finance" },
-  { icon: FaChartBar, name: "Analytics", href: "/" },
-  { icon: MdShoppingCart, name: "E-commerce", href: "/" },
-  { icon: MdSchool, name: "Academy", href: "/" },
-  { icon: FaTruck, name: "Logistics", href: "/" },
+  { icon: MdDashboard, name: "Default", href: "/", visible: "true" },
+  { icon: VscGraph, name: "CRM", href: "/crm", visible: "true" },
+  { icon: FaCreditCard, name: "Finance", href: "/finance", visible: "true" },
+  { icon: FaChartBar, name: "Analytics", href: "/", visible: "false" },
+  { icon: MdShoppingCart, name: "E-commerce", href: "/", visible: "false" },
+  { icon: MdSchool, name: "Academy", href: "/", visible: "false" },
+  { icon: FaTruck, name: "Logistics", href: "/", visible: "false" },
 ];
 
 const dashboard2 = [
-  { icon: MdEmail, name: "Email", href: "/" },
-  { icon: IoChatbox, name: "Chat", href: "/crm" },
-  { icon: FaRegCalendar, name: "Calender", href: "/finance" },
-  { icon: MdViewKanban, name: "Kanban", href: "/" },
-  { icon: FaFileInvoice, name: "Invoice", href: "/" },
-  { icon: ImUsers, name: "Users", href: "/" },
-  { icon: FaLock, name: "Roles", href: "/" },
+  { icon: MdEmail, name: "Email", href: "/", visible: "false" },
+  { icon: IoChatbox, name: "Chat", href: "/crm", visible: "false" },
+  { icon: FaRegCalendar, name: "Calender", href: "/finance", visible: "false" },
+  { icon: MdViewKanban, name: "Kanban", href: "/", visible: "false" },
+  { icon: FaFileInvoice, name: "Invoice", href: "/", visible: "false" },
+  { icon: ImUsers, name: "Users", href: "/", visible: "false" },
+  { icon: FaLock, name: "Roles", href: "/", visible: "false" },
 ];
 
 export function AppSidebar() {
@@ -96,12 +96,27 @@ export function AppSidebar() {
               const Icon = item.icon;
               return (
                 <SidebarMenuItem key={item.name}>
-                  <SidebarMenuButton asChild>
-                    <Link href={item.href}>
-                      <Icon />
-                      <span className="text-[15px]">{item.name}</span>
-                    </Link>
-                  </SidebarMenuButton>
+                  {item.visible === "true" ? (
+                    <SidebarMenuButton asChild>
+                      <Link
+                        href={item.href}
+                        className="flex items-center gap-3"
+                      >
+                        <Icon />
+                        <span className="text-[15px]">{item.name}</span>
+                      </Link>
+                    </SidebarMenuButton>
+                  ) : (
+                    <div className="flex items-center gap-3 justify-between p-2 text-gray-400 cursor-not-allowed opacity-70">
+                      <div className="flex items-center gap-3">
+                        <Icon />
+                        <span className="text-[15px]">{item.name}</span>
+                      </div>
+                      <span className="text-gray-700 bg-gray-300 p-1 text-sm rounded-md ">
+                        soon
+                      </span>
+                    </div>
+                  )}
                 </SidebarMenuItem>
               );
             })}
@@ -114,12 +129,27 @@ export function AppSidebar() {
               const Icon = item.icon;
               return (
                 <SidebarMenuItem key={item.name}>
-                  <SidebarMenuButton asChild>
-                    <Link href={item.href}>
-                      <Icon />
-                      <span className="text-[15px]">{item.name}</span>
-                    </Link>
-                  </SidebarMenuButton>
+                  {item.visible === "true" ? (
+                    <SidebarMenuButton asChild>
+                      <Link
+                        href={item.href}
+                        className="flex items-center gap-3"
+                      >
+                        <Icon />
+                        <span className="text-[15px]">{item.name}</span>
+                      </Link>
+                    </SidebarMenuButton>
+                  ) : (
+                    <div className="flex items-center gap-3 justify-between p-2 text-gray-400 cursor-not-allowed opacity-70">
+                      <div className="flex items-center gap-3">
+                        <Icon />
+                        <span className="text-[15px]">{item.name}</span>
+                      </div>
+                      <span className="text-gray-700 bg-gray-300 p-1 text-sm rounded-md ">
+                        soon
+                      </span>
+                    </div>
+                  )}
                 </SidebarMenuItem>
               );
             })}
