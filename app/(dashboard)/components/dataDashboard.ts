@@ -1,0 +1,60 @@
+import { DashboardTableRow } from "./DashboardTable"
+
+export const dataDashboard: DashboardTableRow[] = [
+  {
+    Header: "Table of contents",
+    SectionType: "Documentation",
+    status: "Done",
+    Target: 29,
+    Limit: 24,
+    Reviewer: "Eddie Lake",
+  },
+  {
+    Header: "Authentication",
+    SectionType: "Security",
+    status: "In Progress",
+    Target: 40,
+    Limit: 30,
+    Reviewer: "Dev Patel",
+  },
+  {
+    Header: "Payments API",
+    SectionType: "Finance",
+    status: "failed",
+    Target: 15,
+    Limit: 20,
+    Reviewer: "Alex John",
+  },
+  {
+    Header: "User Management",
+    SectionType: "Security",
+    status: "In Progress",
+    Target: 22,
+    Limit: 18,
+    Reviewer: "Sarah Miles",
+  },
+  {
+    Header: "Dashboard Analytics",
+    SectionType: "Analytics",
+    status: "Done",
+    Target: 35,
+    Limit: 35,
+    Reviewer: "Eddie Lake",
+  },
+  {
+    Header: "API Integration",
+    SectionType: "Documentation",
+    status: "failed",
+    Target: 10,
+    Limit: 25,
+    Reviewer: "Dev Patel",
+  },
+  {
+    Header: "Notification System",
+    SectionType: "Feature",
+    status: "In Progress",
+    Target: 18,
+    Limit: 20,
+    Reviewer: "Alex John",
+  },
+]

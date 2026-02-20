@@ -1,11 +1,8 @@
 "use client";
 
-import {
-  SidebarProvider,
-  SidebarInset,
-} from "@/components/ui/sidebar";
-import { SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "../components/app-sidebar";
+import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar";
+import { AppSidebar } from "./components/app-sidebar";
+import Navbar from "./components/Navbar";
 
 export default function DashboardLayout({
   children,
@@ -14,17 +11,18 @@ export default function DashboardLayout({
 }) {
   return (
     <SidebarProvider>
-      <AppSidebar />
+     
+      {/* REQUIRED flex wrapper */}
+      <div className="flex min-h-screen w-full">
+        {/* SIDEBAR */}
+        <AppSidebar />
 
-      <SidebarInset>
-        <header className="h-16 flex items-center px-4 border-b">
-          <SidebarTrigger />
-        </header>
-
-        <main className="p-6">
-          {children}
-        </main>
-      </SidebarInset>
+        {/* CONTENT AREA */}
+        <SidebarInset className="flex flex-col flex-1">
+          <Navbar />
+          <main className="flex-1 p-6 bg-muted/30">{children}</main>
+        </SidebarInset>
+      </div>
     </SidebarProvider>
   );
 }

@@ -28,6 +28,7 @@ export default function Navbar() {
     focus-visible:ring-0
     focus-visible:outline-none
 "
+// onClick={}
         />
       </div>
       {/* btns */}
