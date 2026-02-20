@@ -46,8 +46,8 @@ export const columns: ColumnDef<DashboardTableRow>[] = [
             status === "Done"
               ? " bg-green-500/20 text-green-600 border border-green-500/40 backdrop-blur-sm"
               : status === "In Progress"
-              ? "bg-yellow-500/20 text-yellow-600 border border-green-500/40 backdrop-blur-sm"
-              : "bg-red-500/20 text-red-600 border border-green-500/40 backdrop-blur-sm"
+              ? "bg-yellow-500/20 text-yellow-600 border border-yellow-500/40 backdrop-blur-sm"
+              : "bg-red-500/20 text-red-600 border border-red-500/40 backdrop-blur-sm"
           }
               `
           }

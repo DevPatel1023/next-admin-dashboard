@@ -17,7 +17,7 @@ import { Bell, CreditCard, LogOut, User } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <header className="h-16 flex items-center justify-between px-4 border-b">
+    <header className="sticky top-0 z-50 backdrop-blur-md h-16 flex items-center justify-between px-4 border-b">
       <div className="flex items-center">
         <SidebarTrigger />
 
