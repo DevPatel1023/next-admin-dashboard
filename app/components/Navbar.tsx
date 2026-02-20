@@ -65,7 +65,7 @@ export default function Navbar() {
               className="w-60 translate-y-2"
             >
               {/* USER INFO */}
-              <div className="flex items-center gap-3 p-2">
+              <div className="flex items-center gap-3 p-2 hover:bg-gray-100 transition delay-150 duration-150 rounded-sm">
                 <Avatar className="h-9 w-9">
                   <AvatarImage src="https://github.com/shadcn.png" />
                   <AvatarFallback>DP</AvatarFallback>
@@ -74,10 +74,25 @@ export default function Navbar() {
                 <div className="grid">
                   <span className="font-medium">Dev Patel</span>
                   <span className="text-sm text-muted-foreground">
-                    hello@devpatel.com
+                    Administrator
                   </span>
                 </div>
               </div>
+
+              <div className="flex items-center gap-3 p-2 hover:bg-gray-100 transition delay-150 duration-150 rounded-sm">
+                <Avatar className="h-9 w-9">
+                  <AvatarImage src="https://github.com/shadcn.sjs" />
+                  <AvatarFallback>DP</AvatarFallback>
+                </Avatar>
+
+                <div className="grid">
+                  <span className="font-medium">Dev Patel</span>
+                  <span className="text-sm text-muted-foreground">
+                    Admin
+                  </span>
+                </div>
+              </div>
+
 
               <DropdownMenuSeparator />
 
