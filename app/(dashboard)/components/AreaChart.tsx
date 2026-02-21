@@ -38,13 +38,13 @@ export default function AreaChart() {
     xaxis: {
       type: "datetime",
       categories: [
-        "Apr 7",
-        "Apr 9",
-        "Apr 11",
-        "Apr 13",
-        "Apr 15",
-        "Apr 19",
-        "Apr 21",
+        "2024-04-07T00:00:00Z",
+        "2024-04-09T00:00:00Z",
+        "2024-04-11T00:00:00Z",
+        "2024-04-13T00:00:00Z",
+        "2024-04-15T00:00:00Z",
+        "2024-04-19T00:00:00Z",
+        "2024-04-21T00:00:00Z",
       ],
       crosshairs: {
         show: true, // KEEP crosshair

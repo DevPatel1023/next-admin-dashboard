@@ -104,7 +104,7 @@ export function AppSidebar() {
         {/* ACTIONS */}
         <SidebarGroup>
           <SidebarMenu>
-            <SidebarMenuItem>
+            <SidebarMenuItem className="flex items-center justify-between">
               <Button size="default">
                 <IoIosAddCircleOutline />
                 Quick Create
@@ -154,18 +154,16 @@ export function AppSidebar() {
 
             {/* AUTH COLLAPSE */}
             <SidebarMenuItem>
-              <SidebarMenuButton onClick={() => setAuthOpen(!authOpen)}>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div>
-                      <FaFingerprint />
-                    </div>
+              <SidebarMenuButton onClick={() => setAuthOpen(!authOpen)} className="justify-between">
+                <span className="flex items-center justify-between w-full">
+                  <span className="flex items-center gap-2">
+                    <span><FaFingerprint /></span>
                     <span>Authentication</span>
-                  </div>
-                  <div>
+                  </span>
+                  <span>
                     <ChevronDown className={authOpen ? "rotate-180" : ""} />
-                  </div>
-                </div>
+                  </span>
+                </span>
               </SidebarMenuButton>
             </SidebarMenuItem>
 
