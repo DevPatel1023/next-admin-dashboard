@@ -48,7 +48,7 @@ export default function DashboardTable<TData, TValue>({
   })
 
   return (
-    <div className="rounded-md border overflow-hidden">
+    <div className="rounded-md border overflow-x-auto">
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
