@@ -4,8 +4,8 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 import { cn } from "@/lib/utils"
 
 export type CRMCardProps = {
-  title?: string
-  description?: string
+  title?: React.ReactNode
+  description?: React.ReactNode
   action?: React.ReactNode
   footer?: React.ReactNode
   children?: React.ReactNode
