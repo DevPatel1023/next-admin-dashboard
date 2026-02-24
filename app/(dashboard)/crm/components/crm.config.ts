@@ -75,7 +75,7 @@ export const leadsBySourceChartConfig = {
   },
   website: {
     label: "Website",
-    color: "var(--chart-1)",
+    color: "#60a5fa",
   },
   referral: {
     label: "Referral",
@@ -110,7 +110,7 @@ export const projectRevenueChartData = [
 export const projectRevenueChartConfig = {
   actual: {
     label: "Actual",
-    color: "var(--chart-1)",
+    color: "#60a5fa",
   },
   remaining: {
     label: "Remaining",
@@ -122,7 +122,7 @@ export const projectRevenueChartConfig = {
 } as ChartConfig;
 
 export const salesPipelineChartData = [
-  { stage: "Leads", value: 680, fill: "var(--chart-1)" },
+  { stage: "Leads", value: 680, fill: "#60a5fa" },
   { stage: "Qualified", value: 480, fill: "var(--chart-2)" },
   { stage: "Proposal Sent", value: 210, fill: "var(--chart-3)" },
   { stage: "Negotiation", value: 120, fill: "var(--chart-4)" },
@@ -132,7 +132,7 @@ export const salesPipelineChartData = [
 export const salesPipelineChartConfig = {
   value: {
     label: "Leads",
-    color: "var(--chart-1)",
+    color: "#60a5fa",
   },
   stage: {
     label: "Stage",

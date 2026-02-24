@@ -7,6 +7,9 @@ import { TbCoin } from "react-icons/tb";
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { Area, AreaChart, Bar, BarChart, CartesianGrid, Line, LineChart, XAxis } from "recharts";
 import { leadsChartConfig, leadsChartData, proposalsChartConfig, proposalsChartData, revenueChartConfig, revenueChartData } from "./components/crm.config";
+import { InsightCards } from "./components/InsightCards";
+import { OperationalCards } from "./components/OperationCards";
+import { TableCards } from "./components/TableCards";
 
 const cardsData: CRMCardProps[] = [
   {
@@ -197,6 +200,9 @@ export default function CrmPage() {
           </div>
         ))}
       </div>
+      <InsightCards />
+      <OperationalCards />
+      <TableCards />
     </div>
   );
 }
